@@ -1,12 +1,10 @@
 function isPalindrome(word) {
-  const reverseWord = word.split('').reverse().join('');
-
-  return reverseWord === word;
+  return word === word.split('').reverse().join('');
 }
 
 function isEvenOrOdd(number) {
   if (number % 2 === 0) return 'pari';
-  else return 'dispari';
+  return 'dispari';
 }
 
 document.getElementById('check').addEventListener('click', () => {
@@ -19,6 +17,8 @@ document.getElementById('check').addEventListener('click', () => {
   } else {
     result.innerHTML = 'Non è palindroma';
   }
+
+  log('Done');
 });
 
 document.getElementById('play').addEventListener('click', () => {
